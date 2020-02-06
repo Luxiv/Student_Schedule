@@ -1,9 +1,10 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import ScheduleView
+from .views import StudentsScheduleView, IndexView
 
 
 urlpatterns = [
-    path('', ScheduleView.as_view()),
+    path('', IndexView.as_view()),
+    path('schedule/students/', StudentsScheduleView.as_view(), name='schedule_students'),
 ]
