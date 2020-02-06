@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<table class="table table-striped table-bordered text-center">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="{% url 'schedule_students' %}" class='btn btn-info' role='button'> FOR STUDENT</a></td>
+      <td><a href="#" class='btn btn-info' role='button'> FOR TEACHER</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Online School | Home</title>
+<link href="{% static "core/css/bootstrap.css" %}" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static "core/js/jquery-1.11.0.min.js" %}"></script>
+<!-- Custom Theme files -->
+<link href="{% static "core/css/style.css" %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+</head>
+<body>
+<!-- //end-smoth-scrolling -->
+<!--header start here-->
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			 <div class="logo">
+			 	<h1><a href="index.html">Online<span class="logo-clr">Schedule</span></a></h1>
+			 </div>
+			 <div class="head-right">
+			   <div class="top-nav">
+			   		<span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<ul class="res">
+						<li><a class="active" href="index.html"> Home</a></li>
+						<li><a href="about.html"><span data-hover="About">About</span></a></li>
+						<li><a href="journal.html"><span data-hover="TEACHER">Tor Techer</span></a></li>
+						<li><a href="features.html"><span data-hover="Features">Features</span></a></li>
+						<li><a href="contact.html"><span data-hover="Contact">Contact</span></a></li>
+					<div class="clearfix"> </div>
+					</ul>
+
+				<!-- script-for-menu -->
+							 <script>
+							   $( "span.menu" ).click(function() {
+								 $( "ul.res" ).slideToggle( 300, function() {
+								 // Animation complete.
+								  });
+								 });
+							</script>
+			<!-- /script-for-menu -->
+			  </div>
+			 <div class="social">
+				<ul>
+					<li><a class="fa" href="#"><span> </span> </a></li>
+					<li><a class="tw" href="#"><span> </span> </a></li>
+					<li><a class="p" href="#"><span> </span> </a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		   </div>
+		   <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--header end here-->
+<!--banner start here-->
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			{% block content %}
+
+			{% endblock %}
+
+		</div>
+	</div>
+</div>
+<!--banner end here-->
+
+
+<!--footer star here-->
+<div class="footer">
+  <div class="container">
+	  <div class="footer-main">
+		<div class="footer-top">
+			<div class="col-md-3 footer-news">
+			<h5>Newsletter</h5>
+			</div>
+			<div class="col-md-9 ftr-email">
+				<input type="text" value="ENTER EMAIL" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER EMAIL';}">
+				<input type="submit" value="SUBSCRIBE" >
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="foter-bottom">
+					<ul class="ftr-socialicons">
+						<li><a href="#" class="facebook"> </a></li>
+						<li><a href="#" class="twitter"> </a></li>
+						<li><a href="#" class="gmail"> </a></li>
+						<li><a href="#" class="print"> </a></li>
+					</ul>
+				 <p class="footer-copyrts">Не всі права <a href="http://w3layouts.com/" target="_blank">захищені</a> </p>
+		</div>
+	  <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--footer end here-->
+</body>
+</html>
