@@ -17,8 +17,8 @@
 <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="{% static "core/js/move-top.js" %}"></script>
+<script type="text/javascript" src="{% static "core/js/easing.js" %}"></script>
 	<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){
@@ -39,7 +39,7 @@
 			 </div>
 			 <div class="head-right">
 			   <div class="top-nav">
-			   		<span class="menu"> <img src="images/icon.png" alt=""/></span>
+			   		<span class="menu"> <img src="{% static "core/images/icon.png" %}" alt=""/></span>
 					<ul class="res">
 						<li><a class="active" href="index.html"> Home</a></li>
 						<li><a href="about.html"><span data-hover="About">About</span></a></li>
