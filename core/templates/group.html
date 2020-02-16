@@ -30,17 +30,17 @@
           </tr>
         {% else %}
         <tr class="active">
-          <p>
-            <td></td>
-            <td>{{lesson.subject.name}}:</td>
-            <td>{{lesson.teacher.name}}:</td>
-            <td>{{lesson.time_slot.start_time}}-</td>
-            <td>{{lesson.time_slot.end_time}}</td>
-          </p>
+            <p>
+              <td></td>
+              <td>{{lesson.subject.name}}:</td>
+              <td>{{lesson.teacher.name}}:</td>
+              <td>{{lesson.time_slot.start_time}}-</td>
+              <td>{{lesson.time_slot.end_time}}</td>
+            </p>
         </tr>
         {% endifchanged %}
       {% endfor %}
-
+      <td colspan="5"><a href="{% url 'student_groups' %}" class='btn btn-dark text-uppercase' role='button'>Back to group list</a></td>
     </tbody>
   </table>
 </div>

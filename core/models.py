@@ -2,7 +2,7 @@ from django.db import models
 
 class Subject(models.Model):
     name = models.CharField(max_length=256)
-    # teachers =  models.ForeignKey(Teacher, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.name
@@ -36,20 +36,12 @@ class Day(models.Model):
         return self.name
 
 
-# class StudyWeek(models.Model):
-#     number_of_week = models.IntegerField()
-#     days = models.ForeignKey(Day, on_delete=models.CASCADE, null=True)
-#     class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return f'{self.number_of_week.isoformat()}: {self.class_name.isoformat()}'
 
 
 class Lesson(models.Model):
     day_of_week = models.ForeignKey(Day, on_delete=models.CASCADE)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     teacher = models.ForeignKey(Teacher, on_delete=models.SET_NULL, null=True)
-    # weeks = models.ForeignKey(StudyWeek, on_delete=models.SET_NULL, null=True)
     class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
     time_slot = models.ForeignKey(TimeSlot, on_delete=models.SET_NULL, null=True)
 

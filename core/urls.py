@@ -1,13 +1,16 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import StudentsScheduleView, IndexView, TeachersScheduleView, StudentGroupsView, StudentGroupView
+from .views import IndexView, StudentGroupsView, StudentGroupView, TachersListView, TeacherView
 
 
 urlpatterns = [
-    path('', IndexView.as_view()),
+    path('', IndexView.as_view(), name='index'),
+
     path('student/groups/', StudentGroupsView.as_view(), name='student_groups'),
     path('student/groups/<str:name>/', StudentGroupView.as_view(), name='student_group'),
-    path('schedule/students/', StudentsScheduleView.as_view(), name='schedule_students'),
-    path('schedule/teachers/', TeachersScheduleView.as_view(), name='schedule_teacher'),
+
+    path('teacher/names/', TachersListView.as_view(), name='teachers_list'),
+    path('teacher/name/<str:name>/', TeacherView.as_view(), name='teacher'),
+
 ]
