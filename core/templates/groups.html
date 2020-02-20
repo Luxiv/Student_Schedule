@@ -3,7 +3,7 @@
 <p class="title">{{name}}</p>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-striped table-bordered  text-center">
     <thead>
       <tr class="active">
         <th class="text-uppercase">Class name</th>
@@ -13,7 +13,7 @@
       {% for group in student_groups %}
         <tr class="active">
           <p>
-            <td><a href="{% url 'student_group' name=group.name %}" class='btn btn-info btn-block text-uppercase' role='button'>{{group.name}} :</a></td>
+            <td><a href="{% url 'student_group' name=group.name %}" class='btn btn-info  text-uppercase' role='button'>{{group.name}} :</a></td>
           </p>
         </tr>
       {% endfor %}

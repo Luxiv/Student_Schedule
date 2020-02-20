@@ -3,7 +3,7 @@
 <p class="title">{{name}}</p>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-striped table-bordered text-center">
     <thead>
       <tr class="active">
         <th class="text-uppercase">Teachers: </th>
@@ -13,7 +13,7 @@
       {% for teacher in teachers_list %}
         <tr class="active">
           <p>
-            <td><a href="{% url 'teacher' name=teacher.name %}" class='btn btn-info btn-block text-uppercase' role='button'>{{teacher.name}} :</a></td>
+            <td><a href="{% url 'teacher' name=teacher.name %}" class='btn btn-info text-uppercase' role='button'>{{teacher.name}} :</a></td>
           </p>
         </tr>
       {% endfor %}

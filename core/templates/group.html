@@ -17,13 +17,13 @@
       {% for lesson in lessons %}
         {% ifchanged lesson.day_of_week.name %}
           <tr class="active">
-            <td class="text-left" colspan="5">{{lesson.day_of_week.name}}:</td>
+            <td class="text-left" colspan="5"><a href="{% url 'day_of_week' name=lesson.day_of_week.name %}">{{lesson.day_of_week.name}}:</a></td>
           </tr>
           <tr class="active">
             <p>
               <td></td>
               <td>{{lesson.subject.name}}:</td>
-              <td>{{lesson.teacher.name}}:</td>
+              <td> <a href="{% url 'teacher' name=lesson.teacher.name %}">{{lesson.teacher.name}}:</a></td>
               <td>{{lesson.time_slot.start_time}}-</td>
               <td>{{lesson.time_slot.end_time}}</td>
             </p>
@@ -33,14 +33,14 @@
             <p>
               <td></td>
               <td>{{lesson.subject.name}}:</td>
-              <td>{{lesson.teacher.name}}:</td>
+              <td> <a href="{% url 'teacher' name=lesson.teacher.name %}">{{lesson.teacher.name}}:</a></td>
               <td>{{lesson.time_slot.start_time}}-</td>
               <td>{{lesson.time_slot.end_time}}</td>
             </p>
         </tr>
         {% endifchanged %}
       {% endfor %}
-      <td colspan="5"><a href="{% url 'student_groups' %}" class='btn btn-dark text-uppercase' role='button'>Back to group list</a></td>
+      <td class="text-right" colspan="5"><a href="{% url 'student_groups' %}" class='btn btn-dark text-uppercase' role='button'>Back to group list</a></td>
     </tbody>
   </table>
 </div>
