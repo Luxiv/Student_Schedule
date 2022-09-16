@@ -1,8 +1,8 @@
 from django.db import models
 
+
 class Subject(models.Model):
     name = models.CharField(max_length=256)
-
 
     def __str__(self):
         return self.name
@@ -15,11 +15,13 @@ class Teacher(models.Model):
     def __str__(self):
         return self.name
 
+
 class Class(models.Model):
     name = models.CharField(max_length=5)
 
     def __str__(self):
         return self.name
+
 
 class TimeSlot(models.Model):
     start_time = models.TimeField()
@@ -29,13 +31,12 @@ class TimeSlot(models.Model):
     def __str__(self):
         return f'{self.start_time.isoformat()} - {self.end_time.isoformat()}'
 
+
 class Day(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
         return self.name
-
-
 
 
 class Lesson(models.Model):
